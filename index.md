@@ -14,9 +14,14 @@ references:
       given: Carl
     - family: Heim
       given: Timon
-    issued: 2023
-    container-title: TWEPP
-    URL: https://indico.cern.ch/event/1255624/contributions/5445293/
+    issued: 2024
+    container-title: Journal of Instrumentation
+    volume: 19
+    issue: 05
+    page: C05012
+    URL: https://doi.org/10.1088/1748-0221/19/05/C05012
+    DOI: 10.1088/1748-0221/19/05/C05012
+    type: article-journal
 
   - id: Calypso
     title: A fast, low jitter, and low time-walk multi-channel front-end IC for diamond and silicon radiation detectors
