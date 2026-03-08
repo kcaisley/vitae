@@ -1,230 +1,229 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kennedy Caisley</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     html {
       line-height: 1.5;
-      font-family: Georgia, serif;
-      font-size: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 17px;
       color: #1a1a1a;
       background-color: #fdfdfd;
     }
+
     body {
+      max-width: 640px;
       margin: 0 auto;
-      max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      hyphens: auto;
-      overflow-wrap: break-word;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
+      padding: 2em 1.2em;
     }
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.9em;
-        padding: 1em;
-      }
-      h1 {
-        font-size: 1.8em;
-      }
-    }
-    @media print {
-      body {
-        background-color: transparent;
-        color: black;
-        font-size: 12pt;
-      }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
-      }
-      h2, h3, h4 {
-        page-break-after: avoid;
-      }
-    }
-    p {
-      margin: 1em 0;
-    }
-    img {
-      max-width: 100%;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 1.4em;
-    }
-    h5, h6 {
-      font-size: 1em;
-      font-style: italic;
-    }
-    h6 {
-      font-weight: normal;
-    }
-    ol, ul {
-      padding-left: 1.7em;
-      margin-top: 1em;
-    }
-    li > ol, li > ul {
-      margin-top: 0;
-    }
-    blockquote {
-      margin: 1em 0 1em 1.7em;
-      padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
-      color: #606060;
-    }
-    code {
-      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
-      font-size: 85%;
-      margin: 0;
-    }
-    pre {
-      margin: 1em 0;
-      overflow: auto;
-    }
-    pre code {
-      padding: 0;
-      overflow: visible;
-      overflow-wrap: normal;
-    }
-    .sourceCode {
-     background-color: transparent;
-     overflow: visible;
-    }
-    hr {
-      background-color: #1a1a1a;
-      border: none;
-      height: 1px;
-      margin: 1em 0;
-    }
-    table {
-      margin: 1em 0;
-      border-collapse: collapse;
-      width: 100%;
-      overflow-x: auto;
-      display: block;
-      font-variant-numeric: lining-nums tabular-nums;
-    }
-    table caption {
-      margin-bottom: 0.75em;
-    }
-    tbody {
-      margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
-    }
-    th {
-      border-top: 1px solid #1a1a1a;
-      padding: 0.25em 0.5em 0.25em 0.5em;
-    }
-    td {
-      padding: 0.125em 0.5em 0.25em 0.5em;
-    }
-    header {
-      margin-bottom: 4em;
-      text-align: center;
-    }
-    #TOC li {
-      list-style: none;
-    }
-    #TOC ul {
-      padding-left: 1.3em;
-    }
-    #TOC > ul {
-      padding-left: 0;
-    }
-    #TOC a:not(:hover) {
+
+    a {
+      color: #2563eb;
       text-decoration: none;
     }
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
+
+    a:hover {
+      text-decoration: underline;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-    div.csl-bib-body { }
-    div.csl-entry {
-      clear: both;
+
+    h1 {
+      font-size: 1.6em;
+      margin-bottom: 0.8em;
     }
-    .hanging div.csl-entry {
-      margin-left:2em;
-      text-indent:-2em;
+
+    h2 {
+      font-size: 1.3em;
+      margin-top: 2em;
+      margin-bottom: 0.8em;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.3em;
     }
-    div.csl-left-margin {
-      min-width:2em;
-      float:left;
+
+    /* --- Profile section --- */
+    .profile {
+      display: flex;
+      gap: 1.5em;
+      align-items: flex-start;
     }
-    div.csl-right-inline {
-      margin-left:2em;
-      padding-left:1em;
+
+    .profile-bio {
+      flex: 1;
+      min-width: 0;
+      font-size: 0.9em;
     }
-    div.csl-indent {
-      margin-left: 2em;
+
+    .profile-bio p {
+      margin-bottom: 0.8em;
+    }
+
+    .profile-right {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6em;
+    }
+
+    .profile-photo {
+      width: 40vw;
+      max-width: 200px;
+      height: 40vw;
+      max-height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .profile-links {
+      display: flex;
+      gap: 0.8em;
+      font-size: 0.9em;
+    }
+
+    /* --- Chips section --- */
+    .chip-card {
+      display: flex;
+      gap: 1em;
+      margin-bottom: 1.8em;
+      align-items: flex-start;
+    }
+
+    .chip-img-wrap {
+      width: 35vw;
+      max-width: 160px;
+      height: 35vw;
+      max-height: 160px;
+      border-radius: 6px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .chip-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .chip-img-wrap.zoom img {
+      transform: scale(1.2);
+      transform-origin: 55% 55%;
+    }
+
+    .chip-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .chip-info h3 {
+      font-size: 1.05em;
+      margin-bottom: 0.2em;
+    }
+
+    .chip-specs {
+      font-size: 0.85em;
+      color: #555;
+      margin-bottom: 0.4em;
+    }
+
+    .chip-summary {
+      font-size: 0.9em;
+      margin-bottom: 0.4em;
+    }
+
+    .chip-links {
+      font-size: 0.85em;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4em 0.8em;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 480px) {
+      html {
+        font-size: 15px;
+      }
+
+      .profile {
+        gap: 1em;
+      }
+
+      .profile-photo {
+        width: 30vw;
+        height: 30vw;
+      }
+
+      .chip-img {
+        width: 30vw;
+        height: 30vw;
+      }
     }
   </style>
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">Kennedy Caisley</h1>
-</header>
-<p>I am a second-year PhD student working on mixed-signal integrated
-circuit design at the Research and Technology Center for Detector
-Physics (<a
-href="https://www.ftd.uni-bonn.de/en/homepage?set_language=en">FTD</a>),
-University of Bonn, Germany.</p>
-<p>My current research is focused on radiation-hard timing circuits -
-namely time-to-digital converters and clock generators. I am striving to
-conduct this work using automated design scripts to improve design
-speed, reuse, modification, and documentation.</p>
-<p>Contact: <a href="kcaisley@uni-bonn.de">Email</a> | <a
-href="https://github.com/kcaisley">Github</a></p>
-<h2 class="unnumbered" id="works">Works</h2>
-<div id="refs" class="references csl-bib-body" role="doc-bibliography">
-<div id="ref-twepp2023" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">A.
-Krieger, K. Caisley, M. Garcia-Sciveres, C. Grace, and T. Heim,
-<span>“Characterization of the BigRock 28 nm fast timing analog front
-end,”</span> <em>Journal of Instrumentation</em>, vol. 19, no. 05, p.
-C05012, 2024, doi: <a
-href="https://doi.org/10.1088/1748-0221/19/05/C05012">10.1088/1748-0221/19/05/C05012</a>.</div>
-</div>
-<div id="ref-Calypso" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">[2] </div><div class="csl-right-inline">M.
-Mansour <em>et al.</em>, <span>“A fast, low jitter, and low time-walk
-multi-channel front-end IC for diamond and silicon radiation
-detectors,”</span> <em>IEEE Transactions on Nuclear Science</em>, vol.
-70, no. 7, pp. 1514–1524, 2023, doi: <a
-href="https://doi.org/10.1109/TNS.2023.3283220">10.1109/TNS.2023.3283220</a>.</div>
-</div>
-<div id="ref-CitekeyMastersthesis" class="csl-entry"
-role="doc-biblioentry">
-<div class="csl-left-margin">[3] </div><div class="csl-right-inline">K.
-Caisley, <span>“A monolithic radiation-hard testbed for timing
-characterization of charge-sensitive particle detector front-ends in 28
-nm CMOS.”</span> Ohio State University, 2022. Available: <a
-href="http://rave.ohiolink.edu/etdc/view?acc_num=osu1641540254490753">OhioLink ETD</a></div>
-</div>
-<div id="ref-SULIPres" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">[4] </div><div class="csl-right-inline">K.
-Caisley, M. Garcia-Sciveres, and A. Krieger, <span>“Timing performance
-of 28 nm hybrid pixel analog front end,”</span> <em>LBNL SULI Poster
-Session (Remote)</em>. 2021. Available: <a
-href="https://event.fourwaves.com/9e655935-9b75-4ef3-b40e-07a8e8181fcb/abstracts/5bd55d0b-0088-49a7-90ad-2cb0c4ca07a5">Fourwaves</a></div>
-</div>
-</div>
+
+  <h1>Kennedy Caisley</h1>
+
+  <div class="profile">
+    <div class="profile-bio">
+      <p>Hello! I'm a PhD student at the <a href="https://www.uni-bonn.de/en">University of Bonn</a>, where I work on CMOS sensors for high-framerate radiation scientific imaging. I'm also quite nerdy about open-source design automation tools. I'm a part of the <a href="https://silab-bonn.github.io/">SiLab</a> research group; advised by <a href="https://www.pi.uni-bonn.de/dingfelder/en">Jochen Dingfelder</a>.</p>
+      <p>📬 <a href="mailto:kcaisley@uni-bonn.de">Email</a> &nbsp; 💾 <a href="https://github.com/kcaisley/">Code</a> &nbsp; 📍<a href="https://www.openstreetmap.org/?mlat=50.7353&amp;mlon=7.1022&amp;zoom=12&amp;layers=M">Bonn, DE</a></p>
+    </div>
+    <div class="profile-right">
+      <img class="profile-photo" src="images/selbst.jpeg" alt="Kennedy Caisley">
+    </div>
+  </div>
+
+  <h2>Chips</h2>
+
+  <div class="chip-card">
+    <div class="chip-img-wrap"><img src="images/frida_65A.png" alt="FRIDA chip layout"></div>
+    <div class="chip-info">
+      <h3>FRIDA</h3>
+      <div class="chip-specs">65 nm CMOS &middot; Submitted 2025</div>
+      <p class="chip-summary">12-bit 10 Msps SAR ADC in 2500 µm² at ~10 fJ/conv-step, targeting >1 Mpixel sensor arrays at >100 kfps frame rates. Designed entirely with open-source EDA scripting.</p>
+      <div class="chip-links">
+        <a href="https://www.dpg-verhandlungen.de/year/2025/conference/goettingen/part/t/session/55/contribution/6?lang=en">Talk</a>
+        <a href="https://github.com/kcaisley/frida">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="chip-card">
+    <div class="chip-img-wrap zoom"><img src="images/bigrock.jpg" alt="BigRock chip die photo"></div>
+    <div class="chip-info">
+      <h3>BigRock</h3>
+      <div class="chip-specs">28 nm CMOS &middot; Submitted 2022</div>
+      <p class="chip-summary">17-channel hybrid pixel readout front-end with 22 ps LSB TDC, <100 e⁻ noise CSA at 5.4 µW per channel, and 70 ps RMS time-of-arrival resolution at 3 ke⁻ input.</p>
+      <div class="chip-links">
+        <a href="https://doi.org/10.1088/1748-0221/19/05/C05012">Paper</a>
+        <a href="http://rave.ohiolink.edu/etdc/view?acc_num=osu1641540254490753">Thesis</a>
+        <a href="https://indico.cern.ch/event/1255624/contributions/5445293/">Poster</a>
+        <a href="https://indico.cern.ch/event/1127562/contributions/4904726/">Poster</a>
+        <a href="https://event.fourwaves.com/9e655935-9b75-4ef3-b40e-07a8e8181fcb/abstracts/5bd55d0b-0088-49a7-90ad-2cb0c4ca07a5">Poster</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="chip-card">
+    <div class="chip-img-wrap"><img src="images/calypso.jpg" alt="Calypso chip die photo"></div>
+    <div class="chip-info">
+      <h3>Calypso</h3>
+      <div class="chip-specs">65 nm CMOS &middot; Submitted 2021</div>
+      <p class="chip-summary">8-channel front-end for diamond and silicon particle detectors: 1.12 ns peaking time, <25 ps RMS jitter, ±6 ps time-walk over 30 dB dynamic range, 225 Mrad tolerant.</p>
+      <div class="chip-links">
+        <a href="https://doi.org/10.1109/TNS.2023.3283220">Paper</a>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
