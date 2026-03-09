@@ -17,7 +17,7 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       font-size: 17px;
       color: #1a1a1a;
-      background-color: #fdfdfd;
+      background-color: #fff5d1;
     }
 
     body {
@@ -27,7 +27,7 @@
     }
 
     a {
-      color: #2563eb;
+      color: #5e81ac;
       text-decoration: none;
     }
 
@@ -118,6 +118,10 @@
       transform-origin: 55% 55%;
     }
 
+    .chip-img-wrap.blend img {
+      mix-blend-mode: multiply;
+    }
+
     .chip-info {
       flex: 1;
       min-width: 0;
@@ -174,8 +178,8 @@
 
   <div class="profile">
     <div class="profile-bio">
-      <p>Hello! I'm a PhD student at the <a href="https://www.uni-bonn.de/en">University of Bonn</a>, where I work on CMOS sensors for high-framerate radiation scientific imaging. I'm also quite nerdy about open-source design automation tools. I'm a part of the <a href="https://silab-bonn.github.io/">SiLab</a> research group; advised by <a href="https://www.pi.uni-bonn.de/dingfelder/en">Jochen Dingfelder</a>.</p>
-      <p>📫 <a href="mailto:kcaisley@uni-bonn.de">Email</a> &nbsp; &nbsp;💾 <a href="https://github.com/kcaisley/">Code</a> &nbsp; 📍<a href="https://www.openstreetmap.org/relation/62508">Bonn, DE</a></p>
+      <p>Hello! I'm a PhD student at the <a href="https://www.uni-bonn.de/en">University of Bonn</a>, where I work on high-framerate CMOS sensors for radiation imaging. I'm also quite nerdy about open-source chip design tools. I'm a part of the <a href="https://silab-bonn.github.io/">SiLab</a> research group; advised by <a href="https://www.pi.uni-bonn.de/dingfelder/en">Jochen Dingfelder</a>.</p>
+      <p>📫 <a href="mailto:kcaisley@uni-bonn.de">Email</a> &nbsp; &nbsp;💾 <a href="https://github.com/kcaisley/">Code</a> &nbsp; 📍<a href="https://www.openstreetmap.org/?mlat=50.7353&amp;mlon=7.1022&amp;zoom=12&amp;layers=M">Bonn, DE</a></p>
     </div>
     <div class="profile-right">
       <img class="profile-photo" src="images/selbst.jpeg" alt="Kennedy Caisley">
@@ -185,7 +189,7 @@
   <h2>Chips</h2>
 
   <div class="chip-card">
-    <div class="chip-img-wrap"><img src="images/frida_65A.png" alt="FRIDA chip layout"></div>
+    <div class="chip-img-wrap blend"><img src="images/frida_65A.png" alt="FRIDA chip layout"></div>
     <div class="chip-info">
       <h3>FRIDA</h3>
       <div class="chip-specs">65 nm CMOS &middot; Submitted 2025</div>
