@@ -113,11 +113,13 @@
       display: block;
     }
 
+    /* Zoom: crops and centers the BigRock die photo within its square frame */
     .chip-img-wrap.zoom img {
       transform: scale(1.2);
       transform-origin: 55% 55%;
     }
 
+    /* Blend: makes FRIDA's white background transparent against the warm page color */
     .chip-img-wrap.blend img {
       mix-blend-mode: multiply;
     }
@@ -181,15 +183,28 @@
       <p>Hello! I'm a PhD student at the <a href="https://www.uni-bonn.de/en">University of Bonn</a>, where I work on high-framerate CMOS sensors for radiation imaging. I'm also quite nerdy about open-source chip design tools. I'm a part of the <a href="https://silab-bonn.github.io/">SiLab</a> research group; advised by <a href="https://www.pi.uni-bonn.de/dingfelder/en">Jochen Dingfelder</a>.</p>
       <p>📫 <a href="mailto:kcaisley@uni-bonn.de">Email</a> &nbsp; &nbsp;💾 <a href="https://github.com/kcaisley/">Code</a> &nbsp; 📍<a href="https://www.openstreetmap.org/?mlat=50.7353&amp;mlon=7.1022&amp;zoom=12&amp;layers=M">Bonn, DE</a></p>
     </div>
+    <!-- Profile photo: 400px display images (2x retina for 200px max render).
+         Click through to full-res original. AVIF source with JPEG fallback. -->
     <div class="profile-right">
-      <img class="profile-photo" src="images/selbst.jpeg" alt="Kennedy Caisley">
+      <a href="images/selbst.jpeg"><picture>
+        <source srcset="images/selbst_sm.avif" type="image/avif" />
+        <img class="profile-photo" src="images/selbst_sm.jpeg" alt="Kennedy Caisley">
+      </picture></a>
     </div>
   </div>
 
   <h2>Chips</h2>
 
+  <!-- Chip images: 320px display images (2x retina for 160px max render).
+       Click through to full-res original. AVIF source with JPEG/PNG fallback.
+       "blend" class uses mix-blend-mode:multiply to hide FRIDA's white background.
+       "zoom" class uses transform:scale to crop and center BigRock's die photo. -->
+
   <div class="chip-card">
-    <div class="chip-img-wrap blend"><img src="images/frida_65A.png" alt="FRIDA chip layout"></div>
+    <div class="chip-img-wrap blend"><a href="images/frida_65A.png"><picture>
+      <source srcset="images/frida_65A_sm.avif" type="image/avif" />
+      <img src="images/frida_65A_sm.jpg" alt="FRIDA chip layout">
+    </picture></a></div>
     <div class="chip-info">
       <h3>FRIDA</h3>
       <div class="chip-specs">65 nm CMOS &middot; Submitted 2025</div>
@@ -202,7 +217,10 @@
   </div>
 
   <div class="chip-card">
-    <div class="chip-img-wrap zoom"><img src="images/bigrock.jpg" alt="BigRock chip die photo"></div>
+    <div class="chip-img-wrap zoom"><a href="images/bigrock.jpg"><picture>
+      <source srcset="images/bigrock_sm.avif" type="image/avif" />
+      <img src="images/bigrock_sm.jpg" alt="BigRock chip die photo">
+    </picture></a></div>
     <div class="chip-info">
       <h3>BigRock</h3>
       <div class="chip-specs">28 nm CMOS &middot; Submitted 2022</div>
@@ -218,7 +236,10 @@
   </div>
 
   <div class="chip-card">
-    <div class="chip-img-wrap"><img src="images/calypso.jpg" alt="Calypso chip die photo"></div>
+    <div class="chip-img-wrap"><a href="images/calypso.jpg"><picture>
+      <source srcset="images/calypso_sm.avif" type="image/avif" />
+      <img src="images/calypso_sm.jpg" alt="Calypso chip die photo">
+    </picture></a></div>
     <div class="chip-info">
       <h3>Calypso</h3>
       <div class="chip-specs">65 nm CMOS &middot; Submitted 2021</div>
