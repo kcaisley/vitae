@@ -26,6 +26,10 @@
       padding: 2em 1.2em;
     }
 
+    h1, h2, h3, .chip-specs {
+      font-family: "SF Mono", "Menlo", "Consolas", "DejaVu Sans Mono", monospace;
+    }
+
     a {
       color: #5e81ac;
       text-decoration: none;
@@ -83,9 +87,7 @@
     }
 
     .profile-links {
-      display: flex;
-      gap: 0.8em;
-      font-size: 0.9em;
+      font-size: 0.95em;
     }
 
     /* --- Chips section --- */
@@ -181,7 +183,7 @@
   <div class="profile">
     <div class="profile-bio">
       <p>Hello! I'm a PhD student at the <a href="https://www.uni-bonn.de/en">University of Bonn</a>, where I work on high-framerate CMOS sensors for radiation imaging. I'm also quite nerdy about open-source chip design tools. I'm a part of the <a href="https://silab-bonn.github.io/">SiLab</a> research group; advised by <a href="https://www.pi.uni-bonn.de/dingfelder/en">Jochen Dingfelder</a>.</p>
-      <p>📫 <a href="mailto:kcaisley@uni-bonn.de">Email</a> &nbsp; &nbsp;💾 <a href="https://github.com/kcaisley/">Code</a> &nbsp; 📍<a href="https://www.openstreetmap.org/?mlat=50.7353&amp;mlon=7.1022&amp;zoom=12&amp;layers=M">Bonn, DE</a></p>
+      <p class="profile-links">📫 <a href="mailto:kcaisley@uni-bonn.de">Email</a> &nbsp; 💾 <a href="https://github.com/kcaisley/">Code</a> &nbsp; 📍<a href="https://www.openstreetmap.org/?mlat=50.7353&amp;mlon=7.1022&amp;zoom=12&amp;layers=M">Bonn, DE</a></p>
     </div>
     <!-- Profile photo: 400px display images (2x retina for 200px max render).
          Click through to full-res original. AVIF source with JPEG fallback. -->
@@ -206,7 +208,7 @@
       <img src="images/frida_65A_sm.jpg" alt="FRIDA chip layout">
     </picture></a></div>
     <div class="chip-info">
-      <h3>FRIDA 65A</h3>
+      <h3>FRIDA-1</h3>
       <div class="chip-specs">65 nm CMOS &middot; Submitted 2025</div>
       <p class="chip-summary">Array of compact 12-bit 10 Msps SAR ADCs under 2500 µm² at ~10 fJ/conv-step, to enable >100 kfps readout of >1 Mpixel image sensors. Majority designed with open EDA tools.</p>
       <div class="chip-links">
@@ -222,7 +224,7 @@
       <img src="images/frida_130A_sm.jpg" alt="FRIDA 130A chip layout">
     </picture></a></div>
     <div class="chip-info">
-      <h3>FRIDA 130A</h3>
+      <h3>FRIDA-0</h3>
       <div class="chip-specs">130 nm CMOS &middot; Designed 2025</div>
       <p class="chip-summary">Prototype to verify <a href="https://github.com/IHP-GmbH/IHP-Open-PDK">IHP Open130-G2 PDK</a> and <a href="https://github.com/The-OpenROAD-Project/OpenROAD">OpenROAD</a> tooling, with ADC fabric and SPI control. Further development planned, and potential free MPW submission.</p>
       <div class="chip-links">
