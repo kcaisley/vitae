@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kennedy Caisley</title>
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <style>
     * {
       box-sizing: border-box;
@@ -89,6 +88,13 @@
 
     .profile-links {
       font-size: 0.95em;
+    }
+
+    .icon {
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.125em;
+      display: inline-block;
     }
 
     /* --- Chips section --- */
@@ -211,7 +217,7 @@
   <div class="profile">
     <div class="profile-bio">
       <p>Hello! I'm a PhD student at the <a href="https://www.uni-bonn.de/en">University of Bonn</a>, where I work on high-framerate CMOS sensors for radiation imaging. I'm also quite nerdy about open-source chip design tools. I'm a part of the <a href="https://silab-bonn.github.io/">SiLab</a> research group; advised by <a href="https://www.pi.uni-bonn.de/dingfelder/en">Jochen Dingfelder</a>.</p>
-      <p class="profile-links"><a href="mailto:kcaisley@uni-bonn.de"><i class="fa-solid fa-at"></i> Email</a> &nbsp; <a href="https://github.com/kcaisley/"><i class="fa-solid fa-code"></i> Code</a> &nbsp; <a href="https://www.openstreetmap.org/?mlat=50.7353&amp;mlon=7.1022&amp;zoom=12&amp;layers=M"><i class="fa-solid fa-location-crosshairs"></i> Bonn, DE</a></p>
+      <p class="profile-links"><a href="mailto:kcaisley@uni-bonn.de"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg> Email</a> &nbsp; <a href="https://github.com/kcaisley/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg> Code</a> &nbsp; <a href="https://www.openstreetmap.org/relation/62508"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Bonn, DE</a></p>
     </div>
     <!-- Profile photo: 400px display images (2x retina for 200px max render).
          Click through to full-res original. AVIF source with JPEG fallback. -->
@@ -240,11 +246,11 @@
         <button class="active" title="Layout"
           data-avif="images/frida_65A_sm.avif" data-fallback="images/frida_65A_sm.jpg"
           data-full="images/frida_65A.png" data-alt="FRIDA chip layout" data-blend="true"
-          onclick="toggleChipImg(this)"><i class="fas fa-microchip"></i></button>
+          onclick="toggleChipImg(this)"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v2"/><path d="M12 2v2"/><path d="M17 20v2"/><path d="M17 2v2"/><path d="M2 12h2"/><path d="M2 17h2"/><path d="M2 7h2"/><path d="M20 12h2"/><path d="M20 17h2"/><path d="M20 7h2"/><path d="M7 20v2"/><path d="M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg></button>
         <button title="Micrograph"
           data-avif="images/frida_65A_die_sm.avif" data-fallback="images/frida_65A_die_sm.jpg"
           data-full="images/frida_65A_die.png" data-alt="FRIDA chip micrograph" data-blend="false"
-          onclick="toggleChipImg(this)"><i class="fas fa-microscope"></i></button>
+          onclick="toggleChipImg(this)"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg></button>
       </div>
     </div>
     <div class="chip-info">
