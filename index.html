@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kennedy Caisley</title>
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <style>
     * {
       box-sizing: border-box;
@@ -154,6 +155,33 @@
       gap: 0.4em 0.8em;
     }
 
+    /* --- Image toggle --- */
+    .chip-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 0.6em;
+      margin-top: 0.3em;
+    }
+
+    .chip-toggle button {
+      background: none;
+      border: none;
+      color: #aaa;
+      font-size: 1em;
+      cursor: pointer;
+      padding: 0.15em 0.3em;
+      border-radius: 3px;
+      transition: color 0.15s;
+    }
+
+    .chip-toggle button.active {
+      color: #5e81ac;
+    }
+
+    .chip-toggle button:hover {
+      color: #5e81ac;
+    }
+
     /* --- Responsive --- */
     @media (max-width: 480px) {
       html {
@@ -203,10 +231,22 @@
        "zoom" class uses transform:scale to crop and center BigRock's die photo. -->
 
   <div class="chip-card">
-    <div class="chip-img-wrap blend"><a href="images/frida_65A.png"><picture>
-      <source srcset="images/frida_65A_sm.avif" type="image/avif" />
-      <img src="images/frida_65A_sm.jpg" alt="FRIDA chip layout">
-    </picture></a></div>
+    <div>
+      <div class="chip-img-wrap blend"><a href="images/frida_65A.png"><picture>
+        <source srcset="images/frida_65A_sm.avif" type="image/avif" />
+        <img src="images/frida_65A_sm.jpg" alt="FRIDA chip layout">
+      </picture></a></div>
+      <div class="chip-toggle">
+        <button class="active" title="Layout"
+          data-avif="images/frida_65A_sm.avif" data-fallback="images/frida_65A_sm.jpg"
+          data-full="images/frida_65A.png" data-alt="FRIDA chip layout" data-blend="true"
+          onclick="toggleChipImg(this)"><i class="fas fa-microchip"></i></button>
+        <button title="Micrograph"
+          data-avif="images/frida_65A_die_sm.avif" data-fallback="images/frida_65A_die_sm.jpg"
+          data-full="images/frida_65A_die.png" data-alt="FRIDA chip micrograph" data-blend="false"
+          onclick="toggleChipImg(this)"><i class="fas fa-microscope"></i></button>
+      </div>
+    </div>
     <div class="chip-info">
       <h3>FRIDA-1</h3>
       <div class="chip-specs">65 nm CMOS &middot; Submitted 2025</div>
@@ -269,5 +309,24 @@
     </div>
   </div>
 
+  <script>
+    function toggleChipImg(btn) {
+      var wrap = btn.closest('.chip-card').querySelector('.chip-img-wrap');
+      var link = wrap.querySelector('a');
+      var source = wrap.querySelector('source');
+      var img = wrap.querySelector('img');
+      link.href = btn.dataset.full;
+      source.srcset = btn.dataset.avif;
+      img.src = btn.dataset.fallback;
+      img.alt = btn.dataset.alt;
+      if (btn.dataset.blend === 'true') {
+        wrap.classList.add('blend');
+      } else {
+        wrap.classList.remove('blend');
+      }
+      btn.parentNode.querySelectorAll('button').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+    }
+  </script>
 </body>
 </html>
